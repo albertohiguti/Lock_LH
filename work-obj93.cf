@@ -1,19 +1,19 @@
 v 4
-file . "binto7seg.vhd" "b468f4d7ab22862be63c52b086537d0216653ad8" "20241102132350.185":
+file . "binto7seg.vhd" "b468f4d7ab22862be63c52b086537d0216653ad8" "20241102134511.462":
   entity binto7seg at 1( 0) + 0 on 4;
   architecture behavioral of binto7seg at 12( 280) + 0 on 4;
-file . "clk_div.vhd" "ebb4eac8f769133c4338db397ca10418f58c6629" "20241102132350.186":
+file . "clk_div.vhd" "ebb4eac8f769133c4338db397ca10418f58c6629" "20241102134511.462":
   entity clk_div at 1( 0) + 0 on 4;
   architecture behavioral of clk_div at 14( 218) + 0 on 4;
-file . "main.vhd" "6353388a691de9844458d997aee69aff381d615d" "20241102132350.186":
+file . "main.vhd" "66f74264a62160fd3ed4fa6d36b06b9f4b42cc13" "20241102134511.462":
   entity main at 1( 0) + 0 on 4;
   architecture struct of main at 17( 539) + 0 on 4;
-file . "tb_binto7seg.vhd" "e70012a7b9489f902fceb7dcc749f7aded72369c" "20241102132350.187":
+file . "tb_binto7seg.vhd" "e70012a7b9489f902fceb7dcc749f7aded72369c" "20241102134511.462":
   entity tb_binto7seg at 1( 0) + 0 on 4;
   architecture testbench of tb_binto7seg at 7( 80) + 0 on 4;
-file . "tb_trava.vhd" "8642b4de3e86c4d6235dc321d9d56c623c196c10" "20241102132350.187":
-  entity tb_trava1 at 1( 0) + 0 on 4;
-  architecture testbench of tb_trava1 at 8( 103) + 0 on 4;
-file . "trava.vhd" "fffe4a2668c555f4693c93ba01c91d79148088d1" "20241102132350.187":
-  entity trava at 1( 0) + 0 on 4;
-  architecture behavioral of trava at 19( 639) + 0 on 4;
+file . "tb_trava.vhd" "a5642b46559be63a3bb301a27e3bb69f9d608370" "20241102134514.707":
+  entity tb_trava at 1( 0) + 0 on 13;
+  architecture testbench of tb_trava at 8( 102) + 0 on 14;
+file . "trava.vhd" "fffe4a2668c555f4693c93ba01c91d79148088d1" "20241102134514.707":
+  entity trava at 1( 0) + 0 on 11;
+  architecture behavioral of trava at 19( 639) + 0 on 12;

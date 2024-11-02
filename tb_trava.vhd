@@ -2,10 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity tb_trava1 is
+entity tb_trava is
 end entity;
 
-architecture testbench of tb_trava1 is
+architecture testbench of tb_trava is
 
     signal clock: std_logic := '0';
     signal reset: std_logic := '0';
