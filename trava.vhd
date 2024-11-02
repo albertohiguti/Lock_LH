@@ -17,12 +17,12 @@ entity trava is
 end entity;
 
 architecture behavioral of trava is
-    
-    -- signal senha_digitada: natural range 0 to 255;
-    -- signal senha_correta: boolean;
+
 begin
     process(clock, reset)
+
 	variable timer: natural range 0 to 255;
+    
     begin
         if reset = '1' then
             timer := tempo_para_desarme;
@@ -39,8 +39,10 @@ begin
                 trava <= '1'; -- Bloqueado
             end if;
         end if;
-		  -- Atualiza o valor de segundos com o valor do timer
-			segundos <= std_logic_vector(to_unsigned(timer, 8));
+
+        -- Atualiza o valor de segundos com o valor do timer
+        segundos <= std_logic_vector(to_unsigned(timer, 8));
+
     end process;
     
 end architecture;

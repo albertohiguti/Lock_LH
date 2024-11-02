@@ -1,27 +1,16 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
 
 entity tb_binto7seg is
 end entity;
 
 architecture testbench of tb_binto7seg is
 
-    -- Component declaration for the Unit Under Test (UUT)
-    component binto7seg is
-        port (
-            input: in std_logic_vector(3 downto 0); -- 4 pinos de entrada
-            display: out std_logic_vector(7 downto 0) -- 8 pinos de saída
-        );
-    end component;
-
-    -- Signals to connect to the UUT
     signal input: std_logic_vector(3 downto 0) := (others => '0');
     signal display: std_logic_vector(7 downto 0);
 
 begin
-
-    -- Instantiate the Unit Under Test (UUT)
-    uut: binto7seg
+    bin2seg: entity work.binto7seg(behavioral)
         port map (
             input => input,
             display => display
