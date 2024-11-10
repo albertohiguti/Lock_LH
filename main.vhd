@@ -50,6 +50,7 @@ begin
             input => display_1,
             display => display_dir_out
         );
+        
 	led_out <= input;
 
 end architecture;

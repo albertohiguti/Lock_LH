@@ -29,11 +29,11 @@ begin
             trava <= '1'; -- Bloqueado
         elsif rising_edge(clock) then
             if timer > 0 then
-                if unsigned(input) = senha then
+                if unsigned(input) = senha then 
                     trava <= '0'; -- Desbloqueado
                 else
                     trava <= '1'; -- Bloqueado
-                    timer := timer - 1;
+                    timer := timer - 1; 
                 end if;
             else
                 trava <= '1'; -- Bloqueado

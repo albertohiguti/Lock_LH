@@ -16,7 +16,7 @@ architecture testbench of tb_trava is
     constant clock_period : time := 1 sec;
 
 begin
-    uut: entity work.trava(behavioral)
+    trava_def: entity work.trava(behavioral)
         generic map (
             senha => 123,
             tempo_para_desarme => 10
@@ -67,7 +67,7 @@ begin
         input <= "01111011"; -- Correct password again
         wait for clock_period;
         assert (trav = '0') report "Unlock failed" severity error;
-        segundos_restantes := to_integer(unsigned(segundos));
+        segundos_restantes := to_integer(unsigned(segundos)); -- Save current timer value
         wait for 2 * clock_period;
         assert (segundos = std_logic_vector(to_unsigned(segundos_restantes, 8))) report "Timer should not decrement when unlocked" severity error;
         
@@ -75,11 +75,11 @@ begin
         input <= "00000001"; -- Incorrect password
         wait for clock_period;
         assert (trav = '1') report "Lock failed" severity error;
-        segundos_restantes := to_integer(unsigned(segundos));
+        segundos_restantes := to_integer(unsigned(segundos)); -- Save current timer value
         wait for 2 * clock_period;
         assert (segundos = std_logic_vector(to_unsigned(segundos_restantes - 2, 8))) report "Timer should decrement when locked" severity error;
 
-        -- Test Case 6: Wait for timer to decrement
+        -- Test Case 6: Wait for timer to decrement and check if it reaches to zero
         wait for 5 * clock_period;
         assert (segundos = "00000000") report "Timer decrement failed" severity error;
         

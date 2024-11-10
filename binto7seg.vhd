@@ -30,8 +30,10 @@ architecture behavioral of binto7seg is
         "10001110"  -- F
     );
 begin
+
     process (input)
     begin
         display <= display_table(to_integer(unsigned(input)));
     end process;
+
 end architecture;
